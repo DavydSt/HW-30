@@ -1,37 +1,80 @@
 div {
-    position: absolute;
-    top: 200px;
-    left: 300px;
+  position: absolute;
+  top: 200px;
+  left: 300px;
   width: 100px;
   height: 100px;
   animation-name: run-div;
-    animation-duration: 6000ms;
-animation-iteration-count: infinite;
+  animation-duration: 6000ms;
+  animation-iteration-count: infinite;
 }
 
-@keyframes run-div {
+/* @keyframes run-div {
+
   0% {
-    background-color: red;
+    background-color: yellow;
     transform: translate(0px);
   }
 
-  25% {
+  20% {
+    background-color: red;
+    transform: translateX(-200px);
+  }
+
+  40% {
     background-color: blue;
     transform: translateY(200px);
   }
 
-  50% {
+  60% {
     background-color: green;
-    transform: translateX(200px);
+    transform: translateX(-200px);
   }
 
-  75% {
+  80% {
     background-color: yellow;
-    transform: translateY(200px);
+    transform: translateY(-200px);
   }
 
-  100% {
+  100%{
+    background-color: yellow;
+    transform: translate(0px);
+  }
+
+} */
+
+@keyframes run-div {
+  0% {
+    background-color: yellow;
+    /* transform: translateX(200px); */
+    transform: translate(0px);
+  }
+  25%{
     background-color: red;
-    transform: translateX(0px);
+    /* transform: translateY(-200px); */
+    /* transform: translate(0px,200px); */
+    transform: translate(-200px,0px);
+  }
+
+  50%{
+    background-color: blue;
+    /* transform: translateX(-200px); */
+    transform: translate(-200px,-200px);
+    /* transform: translate(-200px,0px); */
+  }
+
+  75%{
+    background-color: green;
+    /* transform: translateY(200px); */
+    /* transform: translate(0px,-200px); */
+    transform: translate(200px,-200px);
+
+  }
+
+  100%{
+    background-color: yellow;
+    /* transform: translate(200px,0px); */
+    transform: translate(200px, 200px);
+
   }
 }
